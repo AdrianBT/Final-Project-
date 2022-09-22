@@ -1,205 +1,87 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-style: italic;
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.6;
-  font-size: 15px;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.navbar {
-  border: solid;
-  border-color: black;
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0a0f1a;
-  color: whitesmoke;
-  font-family: "Permanent Marker", cursive;
+.container{
+  margin: 20px;
 }
-
-.brand-title {
-  font-size: 1.5rem;
-  margin: 0.5rem;
-}
-
-.navbar-links {
-  height: 100%;
-}
-
-.navbar-links ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-}
-
-.navbar-links li {
-  list-style: none;
-}
-
-.navbar-links li a {
-  display: block;
-  text-decoration: none;
-  color: white;
-  padding: 1rem;
-}
-
-.navbar-links li:hover {
-  background-color: #44698f;
-}
-
-.toggle-button {
-  position: absolute;
-  top: 0.75rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-
-.toggle-button .bar {
-  height: 3px;
+.search {
   width: 100%;
-  background-color: white;
-  border-radius: 10px;
-}
-
-@media (max-width: 1250px) {
-  .first-text {
-    position: absolute;
-    z-index: 999;
-    margin: 0 auto;
-    left: 0;
-    right: 500px;
-    text-align: center;
-    top: 20%;
-    /* Adjust this value to move the positioned div up and down */
-    background: rgba(0, 0, 0, 0);
-    font-family: "Permanent Marker", cursive;
-    color: #f03a5b;
-    width: 60%;
-    font-size: 22px;
-    /* Set the width of the positioned div */
-  }
-}
-
-@media (max-width: 800px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .toggle-button {
-    display: flex;
-  }
-
-  .navbar-links {
-    display: none;
-    width: 100%;
-  }
-
-  .navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .navbar-links ul li {
-    text-align: center;
-  }
-
-  .navbar-links ul li a {
-    padding: 0.5rem 1rem;
-  }
-
-  .navbar-links.active {
-    display: flex;
-  }
-}
-
-@media (max-wdith: 769px) {
-  .bar {
-    display: block;
-  }
-  .bar a {
-    font-size: 16px;
-  }
-
-  .menu i {
-    cursor: pointer;
-  }
-
-  .menu {
-    width: 100%;
-    display: none;
-  }
-
-  .menu a {
-    display: block;
-    text-align: center;
-  }
-
-  .active {
-    display: block;
-  }
-}
-
-#root {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-h1 {
-  text-align: center;
-  padding: 1.5rem 2.5rem;
-  background-image: linear-gradient(120deg, #666 0%, #393b3f 100%);
-  margin: 0 0 2rem 0;
-  font-size: 1.5rem;
-  color: white;
-}
-
-img {
-  display: block;
-  margin: 1rem auto;
-  max-width: 100%;
-}
-
-p {
-  padding: 0 2.5rem 2.5rem;
-  margin: 0;
-}
-
-.container {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
 }
 
-.card {
-  margin: 1rem;
-  background: white;
-  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.2s linear;
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
 }
 
-.card:hover {
-  box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
-  transform: translate3D(0, -2px, 0);
+.searchTerm:focus{
+  color: #00B4CC;
 }
 
-@media screen and (min-width: 600px) {
-  .card {
-    flex: 1 1 calc(50% - 2rem);
-  }
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
 }
 
-@media screen and (min-width: 900px) {
-  .card {
-    flex: 1 1 calc(33% - 2rem);
-  }
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 60%;
+}
+
+.animeBlock{
+  margin-top: 20px;
+  width: 60%;
+}
+
+.anime{
+  border: 1px solid black;
+  padding: 15px;
+  margin: 15px 0px;
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.info{
+  margin-left: 20px;
+}
+
+.anime img, .anime .info{
+  display: inline-block;
+}
+
+.top{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30%;
+  border: 1px solid grey;
+  padding: 10px 30px;
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.top .anime{
+  border: none;
+}
+
+.top .anime img{
+  height: 200px;
 }

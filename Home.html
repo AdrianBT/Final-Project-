@@ -1,50 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link href="style.css" type="text/css" rel="stylesheet" />
     <link
-      href="https://fonts.googleapis.com/css?family=Dosis:400,700"
       rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
+    <title>Anime Search</title>
   </head>
-
   <body>
-    <nav class="navbar">
-      <div class="brand-title">Anime X</div>
-      <a href="#" class="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
+    <div class="container">
+      <!--Search Form where user will input the anime name-->
+      <form action="#" id="searchForm">
+        <div class="wrap">
+          <div class="search">
+            <input
+              type="text"
+              class="searchTerm"
+              placeholder="Search Anime..."
+            />
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
 
-      <div class="navbar-links">
-        <ul>
-          <li><a href="library.html">Home</a></li>
-          <li id="Action"><a href="#Action">library</a></li>
-          <!-- <li id="Horror"><a href="#Horror">Horror</a></li>
-          <li id="Samurai"><a href="#Samurai">Samurai</a></li>
-          <li id="Shounen"><a href="#Shounen">Shounen</a></li> -->
-          <li><a href="#">Infomation</a></li>
-          <li><a href="#">Catagories</a></li>
-        </ul>
-      </div>
-    </nav>
+      <!--This div will show the search results for the anime-->
+      <div class="animeBlock"></div>
 
-    <div id="root" class="output">
-      <h1 class="name"></h1>
-      <h2 class="bio"></h2>
-      <div class="image">
-        <img src="" />
+      <!--This div will show the top anime-->
+      <div class="top">
+        <h2>Top Anime Right Now</h2>
+        <hr />
       </div>
     </div>
-
-    <div id="app" type="text"></div>
-
-    <section></section>
-
-    <script src="show.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
